@@ -7,4 +7,5 @@ Tools &  Technologyies
 3. Pytest 
 4. Page object model
 5. HTML Reports
+6. PyCharm IDE
 
