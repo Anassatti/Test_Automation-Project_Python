@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from PageObjects.LoginPage import LoginPage
 from selenium import webdriver
@@ -24,6 +26,7 @@ class Test_001_Login:
         self.driver = setup
         self.logger.info("****Opening URL****")
         self.driver.get(self.baseURL)
+        self.driver.maximize_window()
         act_title = self.driver.title
         if act_title == "Your store. Login":
             self.logger.info("**** Home page title test passed ****")
@@ -44,18 +47,19 @@ class Test_001_Login:
         self.logger.info("****Started Login Test****")
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.lp = LoginPage(self.driver)
-        self.lp.setUsername(self.username)
-        self.lp.setPassword(self.password)
-        self.lp.clickLogin()
+        self.driver.maximize_window()
+        self.loginPage = LoginPage(self.driver)
+      #  self.loginPage.setUsername(self.username)
+       # self.loginPage.setPassword(self.password)
+        self.loginPage.clickLogin()
         act_title = self.driver.title
         if act_title == "Dashboard / nopCommerce administration":
             self.logger.info("****Login test passed ****")
             self.clickLogout()
-            self.driver.close()
+            ##self.driver.close()
             assert True
         else:
             self.logger.error("****Login test failed ****")
             self.driver.save_screenshot(".\\Screenshots\\" + "test_homePageTitle.png")
-            self.driver.close()
+            ##self.driver.close()
             assert False
