@@ -2,7 +2,7 @@ class LoginPage:
     Textbox_username_id = "Email"
     Textbox_password_id = "Password"
     Button_login_xpath = "/html/body/div[6]/div/div/div/div/div[2]/div[1]/div/form/div[3]/button"
-    Link_logout_xpath = "//a[@href='/logout']"
+    Link_logout_xpath = "//a[contains(text(),'Logout')]"
 
     def __init__(self, driver):
         self.driver = driver

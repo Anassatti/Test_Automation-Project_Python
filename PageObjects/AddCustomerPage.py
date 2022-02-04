@@ -94,4 +94,4 @@ class AddCustomer:
         self.driver.find_element_by_xpath(self.btnSave_xpath).click()
 
     def ConfirmationMessage(self):
-        self.driver.find_element_by_tag_name(self.SmConfirmationMessage_tagname).text
+       return self.driver.find_element_by_tag_name(self.SmConfirmationMessage_tagname).text
