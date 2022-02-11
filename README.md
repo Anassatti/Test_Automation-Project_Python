@@ -9,3 +9,8 @@ This repo for  buidling test automation framework using Python
 5. HTML Reports
 6. PyCharm IDE
 7. Jenkins(CI): I integrated Github with Jenkins
+
+
+**Report**
+1. HTML report
+2. Video for the whole execution
