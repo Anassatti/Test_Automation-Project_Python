@@ -1,5 +1,5 @@
 # Test_Automation-Project_Python
-This repo for  buidling test automation framework using Python
+This repo is for  buidling test automation solution and framework for e-commerce website using Python
 
 **Tools & Technologyies**
 1. Python
